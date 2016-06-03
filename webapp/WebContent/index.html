@@ -9,12 +9,19 @@
  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
  <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js">
  </script>
+ 
+ <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css"
+ rel="stylesheet">
+ <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.js">
+ </script>
+<script src="fotorama/fotorama.js"></script>
+ 
  <style type="text/css">
  	#logo{
  				width:176px;
  				height:132px;
  				text-indent:-9999px;
- 				background-image: urlimages/CI_TITLE.png);
+ 				background-image: url(images/CI_TITLE.png);
  				background-repeat: no-repeat;
  				margin-top: 0px;
  				margin-right: auto;
@@ -26,16 +33,20 @@
  					color: #3F3C30;
  					padding-top:10px;
  	}
+ 	
+ 	.fotorama__caption{
+text-align: center;
+}
  </style>
 </head>
 <body>
 		<div data-role="page" id= "main">
 			<div data-role= "header" data-theme= "b">
-			<h2 id= "loge">가상 대학교</h2>
+			<h2 id= "logo">가상 대학교</h2>
 			</div>
 		<div data-role= "content">
 		<ul data-role = "listview" data-inset= "true">
-			<li><a href="#">
+			<li><a href="#campus_images">
 				<img src= "images/pic_i.png" alt="" class="ui-li-thumb"/>
 				<h3 class= "title_style">캠퍼스 이미지</h3>
 				</a></li>
@@ -56,5 +67,35 @@
 		</div>
 			
 			</div>
+		<div data-role="page" id="campus_images" class="gallery-page">
+		 <div data-role="header">
+		 <a href="#main" data-icon="home"
+		 data-direction="reverse" class="ui-btn-left">Home</a>
+		 <h1>캠퍼스 이미지</h1>
+		 </div>
+		<div data-role="content">
+		<div class="fotorama" data-arrows="true" data-width="100%"
+		data-ratio="965/643" data-allowfullscreen="true"
+		data-nav="thumbs">
+		<a href="pic/full/cb01.jpg"><img src="pic/thumb/ca01.jpg"
+		 data-caption="호수공원" /></a>
+		 <a href="pic/full/cb02.jpg"><img src="pic/thumb/ca02.jpg"
+		 data-caption="자유관" /></a>
+		 <a href="pic/full/cb03.jpg"><img src="pic/thumb/ca03.jpg"
+		 data-caption="성실관" /></a>
+		 <a href="pic/full/cb04.jpg"><img src="pic/thumb/ca04.jpg"
+		 data-caption="학생회관" /></a>
+		 <a href="pic/full/cb05.jpg"><img src="pic/thumb/ca05.jpg"
+		 data-caption="자유관 앞 조형물" /></a>
+		 <a href="pic/full/cb06.jpg"><img src="pic/thumb/ca06.jpg"
+		 data-caption="본관" /></a>
+		 <a href="pic/full/cb07.jpg"><img src="pic/thumb/ca07.jpg"
+		 data-caption="채플관" /></a>
+		</div>
+	</div>
+	<div data-role="footer">
+	 <h2>버추얼 대학교</h2>
+	 </div>
+		</div>
 </body>
 </html>
